@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of a lap pool with lane lines and a swimmer"><style>
+@media (prefers-reduced-motion: no-preference){
+.bob{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+.steam{animation:steam 3.2s ease-in-out infinite;opacity:0}
+.steam.d2{animation-delay:1s}.steam.d3{animation-delay:2s}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+.twinkle:nth-of-type(2n){animation-delay:.8s}.twinkle:nth-of-type(3n){animation-delay:1.6s}
+.wave{animation:wave 6s linear infinite}
+.bx{animation:bx 3.2s ease-in-out infinite alternate}
+.by{animation:by .8s cubic-bezier(.5,0,.5,1) infinite alternate}
+.toss{animation:toss 2.4s ease-in-out infinite}
+.drift{animation:drift 9s ease-in-out infinite alternate}
+.spin{animation:spin 30s linear infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}35%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes wave{to{transform:translateX(-60px)}}
+@keyframes bx{from{transform:translateX(-120px)}to{transform:translateX(90px)}}
+@keyframes by{from{transform:translateY(-40px)}to{transform:translateY(20px)}}
+@keyframes toss{0%,100%{transform:translateY(0)}50%{transform:translateY(-34px)}}
+@keyframes drift{to{transform:translateX(40px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<rect width="600" height="420" fill="#EEF0EA"/>
+<rect x="0" y="0" width="600" height="120" fill="#F7F3EC"/>
+<rect x="30" y="120" width="540" height="270" rx="8" fill="#6F9A9B"/>
+<rect x="30" y="120" width="540" height="270" rx="8" fill="none" stroke="#fff" stroke-width="8"/>
+<g><path d="M40 190H560" stroke="#fff" stroke-width="4" stroke-dasharray="10 10"/><path d="M40 190H560" stroke="#A67C52" stroke-width="4" stroke-dasharray="10 30"/></g><g><path d="M40 255H560" stroke="#fff" stroke-width="4" stroke-dasharray="10 10"/><path d="M40 255H560" stroke="#A67C52" stroke-width="4" stroke-dasharray="10 30"/></g><g><path d="M40 320H560" stroke="#fff" stroke-width="4" stroke-dasharray="10 10"/><path d="M40 320H560" stroke="#A67C52" stroke-width="4" stroke-dasharray="10 30"/></g>
+<g fill="none" stroke="#B7D0CD" stroke-width="3" opacity=".9" class="wave"><path d="M80 160 q15 -8 30 0 t30 0"/><path d="M420 290 q15 -8 30 0 t30 0"/><path d="M160 360 q15 -8 30 0 t30 0"/><path d="M440 170 q15 -8 30 0 t30 0"/></g>
+<g transform="translate(300 222)"><g class="bob"><path d="M-70 0 q35 -16 70 0 t70 0" stroke="#fff" stroke-width="4" fill="none"/><circle cx="-10" cy="-8" r="14" fill="#B08D57"/><path d="M-5 -10 q40 -40 70 -10" stroke="#E7B98F" stroke-width="10" stroke-linecap="round" fill="none"/></g></g>
+<g stroke="#C9D2D2" stroke-width="7" fill="none" stroke-linecap="round"><path d="M500 90 v80 M530 90 v80"/><path d="M500 110 h30 M500 135 h30"/></g>
+</svg>

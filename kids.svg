@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of camp pennants, a pool float ring and balls"><style>
+@media (prefers-reduced-motion: no-preference){
+.bob{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+.steam{animation:steam 3.2s ease-in-out infinite;opacity:0}
+.steam.d2{animation-delay:1s}.steam.d3{animation-delay:2s}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+.twinkle:nth-of-type(2n){animation-delay:.8s}.twinkle:nth-of-type(3n){animation-delay:1.6s}
+.wave{animation:wave 6s linear infinite}
+.bx{animation:bx 3.2s ease-in-out infinite alternate}
+.by{animation:by .8s cubic-bezier(.5,0,.5,1) infinite alternate}
+.toss{animation:toss 2.4s ease-in-out infinite}
+.drift{animation:drift 9s ease-in-out infinite alternate}
+.spin{animation:spin 30s linear infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}35%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes wave{to{transform:translateX(-60px)}}
+@keyframes bx{from{transform:translateX(-120px)}to{transform:translateX(90px)}}
+@keyframes by{from{transform:translateY(-40px)}to{transform:translateY(20px)}}
+@keyframes toss{0%,100%{transform:translateY(0)}50%{transform:translateY(-34px)}}
+@keyframes drift{to{transform:translateX(40px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<rect width="600" height="420" fill="#EEF0EA"/>
+<circle cx="110" cy="90" r="50" fill="#B08D57"/>
+<path d="M0 60 Q150 110 300 60 T600 60" stroke="#15281D" stroke-width="2" fill="none"/>
+<g class="sway"><path d="M40 65.6939184024744 l14 34 l14 -34z" fill="#5A3E2B"/><path d="M110 72.78915322365407 l14 34 l14 -34z" fill="#B08D57"/><path d="M180 73.31539174700524 l14 34 l14 -34z" fill="#6F9A9B"/><path d="M250 67.0023378199042 l14 34 l14 -34z" fill="#3F6149"/><path d="M320 57.09261643478731 l14 34 l14 -34z" fill="#A67C52"/><path d="M390 48.67623800539683 l14 34 l14 -34z" fill="#B08D57"/><path d="M460 46.076175114587905 l14 34 l14 -34z" fill="#6F9A9B"/><path d="M530 50.62791911234727 l14 34 l14 -34z" fill="#5A3E2B"/></g>
+<rect x="0" y="300" width="600" height="120" fill="#3F6149"/>
+<g transform="translate(180 290)"><circle r="70" fill="#A67C52"/><circle r="36" fill="#EEF0EA"/><path d="M0 -70 A70 70 0 0 1 70 0 H36 A36 36 0 0 0 0 -36Z M0 70 A70 70 0 0 1 -70 0 H-36 A36 36 0 0 0 0 36Z" fill="#fff"/></g>
+<g transform="translate(410 270)"><g class="bob"><circle r="46" fill="#D8E04A"/><path d="M-40 -20 q40 26 80 0 M-40 20 q40 -26 80 0" stroke="#fff" stroke-width="5" fill="none"/></g></g>
+<g transform="translate(520 330)"><circle r="30" fill="#fff"/><path d="M-30 0 H30 M0 -30 V30" stroke="#5A3E2B" stroke-width="5"/><circle r="30" fill="none" stroke="#5A3E2B" stroke-width="4"/></g>
+</svg>

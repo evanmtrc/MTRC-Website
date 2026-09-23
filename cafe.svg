@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of a steaming coffee cup and a salad bowl"><style>
+@media (prefers-reduced-motion: no-preference){
+.bob{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+.steam{animation:steam 3.2s ease-in-out infinite;opacity:0}
+.steam.d2{animation-delay:1s}.steam.d3{animation-delay:2s}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+.twinkle:nth-of-type(2n){animation-delay:.8s}.twinkle:nth-of-type(3n){animation-delay:1.6s}
+.wave{animation:wave 6s linear infinite}
+.bx{animation:bx 3.2s ease-in-out infinite alternate}
+.by{animation:by .8s cubic-bezier(.5,0,.5,1) infinite alternate}
+.toss{animation:toss 2.4s ease-in-out infinite}
+.drift{animation:drift 9s ease-in-out infinite alternate}
+.spin{animation:spin 30s linear infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}35%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes wave{to{transform:translateX(-60px)}}
+@keyframes bx{from{transform:translateX(-120px)}to{transform:translateX(90px)}}
+@keyframes by{from{transform:translateY(-40px)}to{transform:translateY(20px)}}
+@keyframes toss{0%,100%{transform:translateY(0)}50%{transform:translateY(-34px)}}
+@keyframes drift{to{transform:translateX(40px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<rect width="600" height="420" fill="#EFE3CC"/>
+<rect x="0" y="300" width="600" height="120" fill="#5A3E2B"/><rect x="0" y="300" width="600" height="12" fill="#15281D" opacity=".3"/>
+<g transform="translate(230 170)"><path d="M-80 0 H80 L66 130 H-66Z" fill="#fff"/><path d="M80 30 q50 0 40 45 q-8 30 -48 30" fill="none" stroke="#fff" stroke-width="16"/><rect x="-80" y="-8" width="160" height="16" rx="6" fill="#F7F3EC"/><ellipse cx="0" cy="136" rx="120" ry="14" fill="#15281D" opacity=".25"/><path d="M-40 50 q40 -26 80 0" stroke="#A67C52" stroke-width="6" fill="none"/></g>
+<g stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"><path class="steam" d="M200 140 q-16 -24 0 -48 t0 -48"/><path class="steam d2" d="M240 140 q-16 -24 0 -48 t0 -48"/><path class="steam d3" d="M280 140 q-16 -24 0 -48 t0 -48"/></g>
+<g transform="translate(450 270)"><ellipse rx="95" ry="26" fill="#fff"/><path d="M-80 -8 a80 60 0 0 0 160 0Z" fill="#F7F3EC"/><circle cx="-30" cy="-22" r="16" fill="#3F6149"/><circle cx="0" cy="-30" r="16" fill="#8BA48F"/><circle cx="28" cy="-20" r="14" fill="#A67C52"/><circle cx="-6" cy="-12" r="10" fill="#B08D57"/></g>
+</svg>

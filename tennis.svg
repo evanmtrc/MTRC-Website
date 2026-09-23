@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of an indoor tennis court under an arched roof"><style>
+@media (prefers-reduced-motion: no-preference){
+.bob{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+.steam{animation:steam 3.2s ease-in-out infinite;opacity:0}
+.steam.d2{animation-delay:1s}.steam.d3{animation-delay:2s}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+.twinkle:nth-of-type(2n){animation-delay:.8s}.twinkle:nth-of-type(3n){animation-delay:1.6s}
+.wave{animation:wave 6s linear infinite}
+.bx{animation:bx 3.2s ease-in-out infinite alternate}
+.by{animation:by .8s cubic-bezier(.5,0,.5,1) infinite alternate}
+.toss{animation:toss 2.4s ease-in-out infinite}
+.drift{animation:drift 9s ease-in-out infinite alternate}
+.spin{animation:spin 30s linear infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}35%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes wave{to{transform:translateX(-60px)}}
+@keyframes bx{from{transform:translateX(-120px)}to{transform:translateX(90px)}}
+@keyframes by{from{transform:translateY(-40px)}to{transform:translateY(20px)}}
+@keyframes toss{0%,100%{transform:translateY(0)}50%{transform:translateY(-34px)}}
+@keyframes drift{to{transform:translateX(40px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<rect width="600" height="420" fill="#EEF0EA"/>
+<path d="M0 170 Q300 20 600 170 V420 H0Z" fill="#F7F3EC"/>
+<path d="M0 170 Q300 20 600 170" fill="none" stroke="#8BA48F" stroke-width="6"/>
+<g stroke="#8BA48F" stroke-width="3" opacity=".5"><path d="M150 108V420M300 84V420M450 108V420"/></g>
+<rect x="0" y="330" width="600" height="90" fill="#3F6149"/>
+<path d="M60 400 L170 250 H430 L540 400Z" fill="#6F9A9B"/>
+<path d="M60 400 L170 250 H430 L540 400Z" fill="none" stroke="#fff" stroke-width="4"/>
+<path d="M300 250V400M115 325H485M130 305 H470" stroke="#fff" stroke-width="3" fill="none"/>
+<rect x="104" y="300" width="392" height="30" fill="none" stroke="#15281D" stroke-width="2"/>
+<g stroke="#15281D" stroke-width="1" opacity=".55"><path d="M104 310H496M104 320H496"/><path d="M116 300V330"/><path d="M128 300V330"/><path d="M140 300V330"/><path d="M152 300V330"/><path d="M164 300V330"/><path d="M176 300V330"/><path d="M188 300V330"/><path d="M200 300V330"/><path d="M212 300V330"/><path d="M224 300V330"/><path d="M236 300V330"/><path d="M248 300V330"/><path d="M260 300V330"/><path d="M272 300V330"/><path d="M284 300V330"/><path d="M296 300V330"/><path d="M308 300V330"/><path d="M320 300V330"/><path d="M332 300V330"/><path d="M344 300V330"/><path d="M356 300V330"/><path d="M368 300V330"/><path d="M380 300V330"/><path d="M392 300V330"/><path d="M404 300V330"/><path d="M416 300V330"/><path d="M428 300V330"/><path d="M440 300V330"/><path d="M452 300V330"/><path d="M464 300V330"/><path d="M476 300V330"/><path d="M488 300V330"/></g>
+<rect x="96" y="292" width="8" height="40" fill="#15281D"/><rect x="496" y="292" width="8" height="40" fill="#15281D"/>
+<g class="bx"><g class="by"><circle cx="330" cy="220" r="15" fill="#D8E04A"/><path d="M317 213 q13 8 26 0 M317 227 q13 -8 26 0" stroke="#fff" stroke-width="2.4" fill="none"/></g></g>
+</svg>

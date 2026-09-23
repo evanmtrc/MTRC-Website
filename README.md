@@ -12,22 +12,24 @@ Staff photos currently load from the existing mttamrc.com site. If a photo can't
 
 To host the photos yourself, run `bash scripts/get-photos.sh`. It saves them into `images/team/`. Commit the new files.
 
-To add a photo that isn't on the old site yet (for example Marta Kaltrieder), save it as `images/team/marta-kaltrieder.jpg`. The site picks it up automatically.
+To add a photo that isn't on the old site (for example Marta Kaltrieder), save it as `images/team/marta-kaltrieder.jpg`.
 
 ## Editing common things
 - **Membership prices:** edit them in `membership.html` (the tables and the promotion table) and in `site.js` (the `plans` object).
-- **The prepaid-dues promotion:** edit or remove the `#promo` section in `membership.html`, the home page banner in `index.html`, and `PROMO` in `site.js`. `months` sets how many months are prepaid.
-- **Swim lesson prices:** edit the table in `swim-lessons.html`.
-- **Hours:** edit them in the page text and in `site.js` (the `hours` object that powers the "Open now" indicators). The café opens at 10:30 AM.
-- **Tennis lesson number:** Shibu's line, (415) 505-9550, appears on `tennis.html`, `shibu-lal.html` and the home page.
+- **The prepaid-dues promotion:** edit or remove the `#promo` section in `membership.html`, the home banner in `index.html`, and `PROMO` in `site.js`.
+- **Swim lesson fees:** edit the three fee cards in `swim-lessons.html`.
+- **Hours:** edit them in the page text and in `site.js` (the `hours` object). The café opens at 10:30 AM.
+- **Tennis lessons:** Shibu's line, (415) 505-9550.
+- **Free trials:** the gym, the pools and the café only. Nothing else on the site offers a free trial.
 
 ## Motion and accessibility
-- **Motion On/Off switch** in the top bar. The choice is remembered on each device. Motion also turns off automatically when the device has "reduce motion" turned on.
+- **Motion On/Off switch** in the top bar, remembered on each device. Motion also turns off automatically when the device has "reduce motion" enabled.
 - **Text size switch (A / A+)**, also remembered on each device.
-- On phones the menu opens as a full-screen sheet that scrolls on its own, with the page locked behind it.
+- The activities ribbon is driven by JavaScript: it loops seamlessly, pauses when it's off screen, and pauses on mouse hover.
+- On phones the menu opens as a full-screen sheet that scrolls on its own, and the page behind it stays put.
 
 ## Before launch
 Confirm these with the front desk:
 - The exact terms of the prepaid-dues promotion
-- Swim lesson prices. They came from the club's older website, which said to double-check them.
+- The Saturday pickleball drop-in time (listed as 2–4 PM)
 - A photo and short bio for Marta Kaltrieder

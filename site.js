@@ -246,6 +246,36 @@
   }
   layoutDay();
 
+  /* ------------------------------------------------------------------ Activities ribbon
+     Driven by JavaScript so it loops seamlessly in every browser: it measures one copy of the list,
+     moves at a steady speed, wraps exactly at that width, re-measures after fonts load, and pauses
+     when off screen or (with a mouse) on hover. */
+  var mTrack = $('.marquee .track');
+  if(mTrack){
+    var mList = $('ul', mTrack), mW = 0, mX = 0, mLast = 0, mVisible = true, mHover = false, SPEED = 55;
+    var measureM = function(){ mW = mList.getBoundingClientRect().width; };
+    measureM();
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(measureM);
+    window.addEventListener('resize', measureM);
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(en){ mVisible = en[0].isIntersecting; }).observe(mTrack);
+    }
+    if(finePointer){
+      mTrack.addEventListener('mouseenter', function(){ mHover = true; });
+      mTrack.addEventListener('mouseleave', function(){ mHover = false; });
+    }
+    var stepM = function(t){
+      var dt = mLast ? Math.min((t - mLast) / 1000, 0.05) : 0; mLast = t;
+      if(motionOK() && mVisible && !mHover && mW > 0){
+        mX -= SPEED * dt;
+        if(-mX >= mW) mX += mW;
+        mTrack.style.transform = 'translate3d(' + mX.toFixed(2) + 'px,0,0)';
+      }
+      requestAnimationFrame(stepM);
+    };
+    requestAnimationFrame(stepM);
+  }
+
   /* ------------------------------------------------------------------ Quote carousel */
   var quotes = $$('.quote'), qBtns = $$('.q-controls [data-q]'), qPause = $('.q-controls [data-pause]');
   if(quotes.length){

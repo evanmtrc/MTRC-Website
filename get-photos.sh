@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Downloads staff photos from the current mttamrc.com site into images/team/
+# so the new site no longer depends on the old WordPress site.
+set -e
+cd "$(dirname "$0")/../images/team"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/BO.jpeg" -o "shibu-lal.jpg" || echo "Could not fetch shibu-lal"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/Picture5.jpg" -o "steve-summer.jpg" || echo "Could not fetch steve-summer"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/Kaitlyn.jpg" -o "kaitlyn-larkin.jpg" || echo "Could not fetch kaitlyn-larkin"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/Vince.jpg" -o "vince-truong.jpg" || echo "Could not fetch vince-truong"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/Robert.jpg" -o "bob-collins.jpg" || echo "Could not fetch bob-collins"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/Vicki.jpg" -o "vicky-cunningham.jpg" || echo "Could not fetch vicky-cunningham"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/Jesus.jpg" -o "jesus-vara.jpg" || echo "Could not fetch jesus-vara"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/Gladys.jpg" -o "gladys-calle.jpg" || echo "Could not fetch gladys-calle"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/Victoria.jpg" -o "victoria-calle.jpg" || echo "Could not fetch victoria-calle"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/jodie.jpg" -o "jodie-hawley.jpg" || echo "Could not fetch jodie-hawley"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/Angela-1.jpg" -o "angela-downs.jpg" || echo "Could not fetch angela-downs"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/Claire.jpg" -o "claire-cohn.jpg" || echo "Could not fetch claire-cohn"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/lynette.png" -o "lynnette-kling.jpg" || echo "Could not fetch lynnette-kling"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/al.jpg" -o "al-loren.jpg" || echo "Could not fetch al-loren"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/kelley.png" -o "kelley-busby.jpg" || echo "Could not fetch kelley-busby"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/David-rotated.jpg" -o "david-bearden.jpg" || echo "Could not fetch david-bearden"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/Kevin.jpg" -o "kevin-michaels.jpg" || echo "Could not fetch kevin-michaels"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/Hiroe.jpg" -o "hiroe-bell.jpg" || echo "Could not fetch hiroe-bell"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/02/Vicky-S.jpg" -o "vicki-stolberg.jpg" || echo "Could not fetch vicki-stolberg"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/03/IMG_2113-e1741365015495.jpeg" -o "paige-santucci.jpg" || echo "Could not fetch paige-santucci"
+curl -fsSL "https://mttamrc.com/wp-content/uploads/2025/04/Untitled-design.png" -o "steven-katz.jpg" || echo "Could not fetch steven-katz"
