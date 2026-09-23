@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of the clubhouse below Mt. Tamalpais">
+<rect width="600" height="420" fill="#DCEAEC"/>
+<path d="M0 260 L120 150 200 210 320 90 440 220 520 160 600 230 V420 H0Z" fill="#3B5A45"/>
+<path d="M0 300 L150 230 300 280 450 220 600 290 V420 H0Z" fill="#1D3A2B"/>
+<rect x="160" y="250" width="280" height="110" fill="#FBF7EE"/><path d="M140 255 L300 190 460 255Z" fill="#8A3B29"/>
+<rect x="280" y="300" width="40" height="60" fill="#1D3A2B"/><rect x="190" y="280" width="44" height="34" fill="#DCEAEC" stroke="#1D3A2B" stroke-width="3"/><rect x="366" y="280" width="44" height="34" fill="#DCEAEC" stroke="#1D3A2B" stroke-width="3"/>
+<rect x="0" y="360" width="600" height="60" fill="#12251A"/>
+<text x="300" y="242" text-anchor="middle" font-family="Georgia" font-weight="700" font-size="22" fill="#fff">EST. 1974</text>
+</svg>

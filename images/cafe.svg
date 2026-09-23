@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of a steaming coffee cup and a salad bowl">
+<rect width="600" height="420" fill="#F4D48A"/>
+<rect x="0" y="300" width="600" height="120" fill="#8A3B29"/><rect x="0" y="300" width="600" height="12" fill="#12251A" opacity=".3"/>
+<g transform="translate(230 170)"><path d="M-80 0 H80 L66 130 H-66Z" fill="#fff"/><path d="M80 30 q50 0 40 45 q-8 30 -48 30" fill="none" stroke="#fff" stroke-width="16"/><rect x="-80" y="-8" width="160" height="16" rx="6" fill="#F1F3EC"/><ellipse cx="0" cy="136" rx="120" ry="14" fill="#12251A" opacity=".25"/><path d="M-40 50 q40 -26 80 0" stroke="#C4593F" stroke-width="6" fill="none"/></g>
+<g stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none" opacity=".85"><path d="M200 140 q-16 -24 0 -48 t0 -48"/><path d="M240 140 q-16 -24 0 -48 t0 -48"/><path d="M280 140 q-16 -24 0 -48 t0 -48"/></g>
+<g transform="translate(450 270)"><ellipse rx="95" ry="26" fill="#fff"/><path d="M-80 -8 a80 60 0 0 0 160 0Z" fill="#F1F3EC"/><circle cx="-30" cy="-22" r="16" fill="#3B5A45"/><circle cx="0" cy="-30" r="16" fill="#5E7D66"/><circle cx="28" cy="-20" r="14" fill="#C4593F"/><circle cx="-6" cy="-12" r="10" fill="#CE9A38"/></g>
+</svg>

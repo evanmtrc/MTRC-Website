@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of a Mt. Tam membership card">
+<rect width="600" height="420" fill="#F4D48A"/>
+<g transform="translate(300 210) rotate(-8)"><rect x="-200" y="-120" width="400" height="240" rx="22" fill="#1D3A2B"/><rect x="-200" y="40" width="400" height="80" fill="#12251A"/>
+<circle cx="-140" cy="-60" r="34" fill="#F1F3EC"/><path d="M-166 -46 l18 -24 10 12 8 -10 18 22z" fill="#1D3A2B"/><circle cx="-128" cy="-76" r="5" fill="#CE9A38"/>
+<text x="-92" y="-66" font-family="Georgia" font-weight="700" font-size="30" fill="#fff">Mt. Tam</text><text x="-92" y="-40" font-family="Verdana" font-size="14" fill="#F1F3EC">MEMBER</text>
+<rect x="100" y="-50" width="60" height="44" rx="6" fill="#CE9A38"/><path d="M100 -28 h60 M130 -50 v44" stroke="#12251A" stroke-width="2"/>
+<rect x="-160" y="68" width="200" height="12" rx="6" fill="#5E7D66"/><rect x="-160" y="90" width="130" height="10" rx="5" fill="#5E7D66" opacity=".6"/></g>
+</svg>
