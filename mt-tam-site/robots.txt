@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mttamrc.com/sitemap.xml
