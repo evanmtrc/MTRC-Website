@@ -9,8 +9,8 @@
 <meta property="og:type" content="website"><meta property="og:title" content="Mt. Tam Racquet & Athletic Club | Tennis, Pickleball, Swim & Fitness in Larkspur, CA"><meta property="og:description" content="Indoor and outdoor tennis, pickleball, two pools, a full gym, Pilates and a café in Larkspur, CA. A friendly, independently owned family club since 1974.">
 <meta property="og:url" content="https://mttamrc.com/"><meta property="og:image" content="https://mttamrc.com/images/og-image.png"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1D3A2B">
-<script>document.documentElement.classList.add('js');try{if(localStorage.getItem('mtrc-text')==='large')document.documentElement.classList.add('text-large');}catch(e){}function imgFail(i){var r=i.getAttribute('data-remote');if(r&&!i.dataset.tried){i.dataset.tried=1;i.src=r;return;}var f=i.getAttribute('data-fallback');if(f&&!i.dataset.fb){i.dataset.fb=1;i.classList.add('illo');i.src=f;return;}var m=document.createElement('span');m.className='mono'+(i.classList.contains('big')?' big':'');m.setAttribute('aria-hidden','true');m.textContent=i.getAttribute('data-initials');i.replaceWith(m);}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');try{var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches,mp=localStorage.getItem('mtrc-motion');document.documentElement.classList.add((mp==='off'||(rm&&mp!=='on'))?'reduce-motion':'motion-ok');}catch(e){document.documentElement.classList.add('motion-ok');}try{if(localStorage.getItem('mtrc-text')==='large')document.documentElement.classList.add('text-large');}catch(e){}function imgFail(i){var r=i.getAttribute('data-remote');if(r&&!i.dataset.tried){i.dataset.tried=1;i.src=r;return;}var f=i.getAttribute('data-fallback');if(f&&!i.dataset.fb){i.dataset.fb=1;i.classList.add('illo');i.src=f;return;}var m=document.createElement('span');m.className='mono'+(i.classList.contains('big')?' big':'');m.setAttribute('aria-hidden','true');m.textContent=i.getAttribute('data-initials');i.replaceWith(m);}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400..700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="styles.css">
@@ -41,17 +41,25 @@
 </svg>
 
 <a class="skip" href="#main">Skip to main content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar">
   <div class="wrap">
     <span class="item"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+14159246226">(415) 924-6226</a></span>
     <span class="item hours-item"><span class="status" data-status="club">Mon–Fri 4:45 AM–10 PM, Sat–Sun 6:45 AM–9 PM</span></span>
     <span class="spacer"></span>
-    <span class="textsize" role="group" aria-label="Text size">
-      <span>Text size</span>
-      <button type="button" data-size="normal" aria-pressed="true" aria-label="Standard text">A</button>
-      <button type="button" data-size="large" class="big" aria-pressed="false" aria-label="Larger text">A+</button>
+    <span class="toggles">
+      <span class="textsize" role="group" aria-label="Text size">
+        <span class="lbl">Text</span>
+        <button type="button" data-size="normal" aria-pressed="true" aria-label="Standard text">A</button>
+        <button type="button" data-size="large" class="big" aria-pressed="false" aria-label="Larger text">A+</button>
+      </span>
+      <span class="motion" role="group" aria-label="Animation">
+        <span class="lbl">Motion</span>
+        <button type="button" data-motion="on" aria-pressed="true">On</button>
+        <button type="button" data-motion="off" aria-pressed="false">Off</button>
+      </span>
     </span>
-    <a class="item" href="https://mtrc.clubautomation.com/member-portal/create-account">Member login</a>
+    <a class="item login-item" href="https://mtrc.clubautomation.com/member-portal/create-account">Member login</a>
   </div>
 </div>
 <header class="menubar">
@@ -61,114 +69,173 @@
       <span><b>Mt. Tam</b><small>Racquet &amp; Athletic Club</small></span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="label">Menu</span></button>
-    <nav id="site-nav" class="nav" aria-label="Main menu"><ul><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-0">Tennis<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-0"><span class="dd-label">Tennis</span><ul><li><a href="tennis.html">Tennis overview<small>Courts, lessons, clinics and leagues</small></a></li><li><a href="shibu-lal.html">Meet Shibu Lal<small>Our tennis director</small></a></li><li><a href="tennis.html#pros">Tennis pros<small>The coaches on our courts</small></a></li></ul></div></li><li><a href="pickleball.html">Pickleball</a></li><li><a href="swim.html">Swim</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-3">Fitness<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-3"><span class="dd-label">Fitness</span><ul><li><a href="fitness.html">Gym and training<small>Equipment, trainers and basketball</small></a></li><li><a href="pilates.html">Pilates studio<small>Reformer, mat and private sessions</small></a></li><li><a href="classes.html">Class guide<small>Find a class that suits you</small></a></li></ul></div></li><li><a href="kids.html">Kids &amp; camp</a></li><li><a href="cafe.html">Café</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-6">Club<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-6"><span class="dd-label">Club</span><ul><li><a href="events.html">Events and club life<small>Dances, Tai Chi, tournaments</small></a></li><li><a href="team.html">Our team<small>The people who run the club</small></a></li><li><a href="about.html">Our story<small>Larkspur's club since 1974</small></a></li><li><a href="accessibility.html">Accessibility<small>How we make the club and site easy to use</small></a></li></ul></div></li><li><a href="visit.html">Visit</a></li><li class="join"><a href="membership.html">Join</a></li></ul></nav>
+    <nav id="site-nav" class="nav" aria-label="Main menu"><ul><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-0">Tennis<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-0"><span class="dd-label">Tennis</span><ul><li><a href="tennis.html">Tennis overview<small>Courts, lessons, clinics and leagues</small></a></li><li><a href="shibu-lal.html">Meet Shibu Lal<small>Our tennis director</small></a></li><li><a href="tennis.html#pros">Tennis pros<small>Shibu Lal and Steve Summer</small></a></li></ul></div></li><li><a href="pickleball.html">Pickleball</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-2">Swim<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-2"><span class="dd-label">Swim</span><ul><li><a href="swim.html">Pools and swimming<small>Indoor and outdoor pools, water aerobics</small></a></li><li><a href="swim-lessons.html">Swim lessons and prices<small>Private and group lessons for every age</small></a></li></ul></div></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-3">Fitness<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-3"><span class="dd-label">Fitness</span><ul><li><a href="fitness.html">Gym and training<small>Equipment, trainers and basketball</small></a></li><li><a href="pilates.html">Pilates studio<small>Reformer, mat and private sessions</small></a></li><li><a href="classes.html">Class guide<small>Find a class that suits you</small></a></li></ul></div></li><li><a href="kids.html">Kids &amp; camp</a></li><li><a href="cafe.html">Café</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-6">Club<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-6"><span class="dd-label">Club</span><ul><li><a href="events.html">Events and club life<small>Dances, Tai Chi, tournaments</small></a></li><li><a href="team.html">Our team<small>The people who run the club</small></a></li><li><a href="about.html">Our story<small>Larkspur's club since 1974</small></a></li><li><a href="accessibility.html">Accessibility<small>How we make the club and site easy to use</small></a></li></ul></div></li><li><a href="visit.html">Visit</a></li><li class="join"><a href="membership.html">Join</a></li></ul></nav>
   </div>
 </header>
 <main id="main">
 
-<div class="banner"><div class="wrap">Thinking about joining? Tours are free and relaxed. <a href="tel:+14159246226">Call (415) 924-6226</a> or just stop by.</div></div>
+<div class="banner"><div class="wrap">Limited-time offer: no initiation fee when you prepay 3 months of dues. <a href="membership.html#promo">See your savings</a></div></div>
 <section class="hero">
+  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div>
-      <h1>Rain or shine, Marin plays here.</h1>
-      <p class="lede">Tennis, pickleball, two pools, a full gym and a café, all in one friendly club in Larkspur. Kids, grandparents and everyone in between have called it home since 1974.</p>
+      <p class="kicker">Larkspur's family club since 1974</p>
+      <h1 data-split>Rain or shine, Marin plays here.</h1>
+      <p class="lede">Tennis, pickleball, two pools, a full gym and a café, all in one friendly club. Kids, grandparents and everyone in between have called it home for over 50 years.</p>
       <div class="actions"><a class="btn btn-primary" href="membership.html">See membership prices</a><a class="btn btn-secondary" href="tel:+14159246226"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call (415) 924-6226</a></div>
     </div>
-    <figure class="art" style="margin:0"><svg class="hero-art" viewBox="0 0 1000 620" role="img" aria-label="Illustration of Mt. Tamalpais with sun on one side and rain on the other, above a tennis court">
-          <defs>
-            <linearGradient id="skySun" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#F4D48A"/><stop offset="1" stop-color="#DCEAEC"/>
-            </linearGradient>
-            <linearGradient id="skyRain" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#8FA3A8"/><stop offset="1" stop-color="#C7D3D2"/>
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="500" height="430" fill="url(#skySun)"/>
-          <rect x="500" y="0" width="500" height="430" fill="url(#skyRain)"/>
-          <circle cx="230" cy="150" r="70" fill="#F4D48A" opacity=".55"/>
-          <circle cx="230" cy="150" r="46" fill="#CE9A38"/>
-          <g fill="#93A6AA">
-            <ellipse cx="740" cy="130" rx="58" ry="34"/>
-            <ellipse cx="790" cy="145" rx="50" ry="30"/>
-            <ellipse cx="690" cy="150" rx="46" ry="26"/>
-          </g>
-          <g stroke="#5B7178" stroke-width="5" stroke-linecap="round" opacity=".8">
-            <path d="M700 195v26"/><path d="M735 200v30"/><path d="M770 195v26"/><path d="M805 200v30"/>
-          </g>
-          <path d="M0 430 L120 300 220 380 340 260 460 400 560 300 660 390 780 280 880 370 1000 320 1000 430 Z" fill="#12251A" opacity=".9"/>
-          <path d="M0 460 L160 360 300 430 430 330 560 440 720 350 860 430 1000 380 1000 460 Z" fill="#1D3A2B"/>
-          <path d="M0 500 L200 430 400 480 620 410 820 470 1000 430 1000 500 Z" fill="#2C4E3B"/>
-          <rect x="0" y="495" width="1000" height="125" fill="#3B5A45"/>
-          <rect x="230" y="520" width="540" height="80" fill="none" stroke="#F1F3EC" stroke-width="4" opacity=".85"/>
-          <line x1="500" y1="520" x2="500" y2="600" stroke="#F1F3EC" stroke-width="3" stroke-dasharray="7 7" opacity=".85"/>
-          <line x1="230" y1="560" x2="770" y2="560" stroke="#F1F3EC" stroke-width="3" opacity=".7"/>
-          <circle cx="620" cy="548" r="8" fill="#F1F3EC" opacity=".9"/>
-        </svg><figcaption>We have the only indoor tennis courts in Marin County.</figcaption></figure>
+    <figure class="scene-card" style="margin:0">
+      <div class="scene-frame"><svg class="hero-scene" viewBox="0 0 1000 720" role="img" aria-label="Illustration of Mt. Tamalpais with sunshine on one side and rain on the other, above an indoor-outdoor tennis court with a ball in play" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="hsSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1DDB6"/><stop offset="1" stop-color="#FBF8F2"/></linearGradient>
+    <linearGradient id="hsRain" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9C4BD"/><stop offset="1" stop-color="#EDEFEA"/></linearGradient>
+    <linearGradient id="hsCourt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4E7A68"/><stop offset="1" stop-color="#3F6655"/></linearGradient>
+    <radialGradient id="hsGlow"><stop offset="0" stop-color="#F6E3B8" stop-opacity=".95"/><stop offset="1" stop-color="#F6E3B8" stop-opacity="0"/></radialGradient>
+    <clipPath id="hsLeft"><rect x="0" y="0" width="500" height="720"/></clipPath>
+    <clipPath id="hsRight"><rect x="500" y="0" width="500" height="720"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="500" height="720" fill="url(#hsSun)"/>
+  <rect x="500" y="0" width="500" height="720" fill="url(#hsRain)"/>
+
+  <g clip-path="url(#hsLeft)">
+    <circle cx="240" cy="170" r="150" fill="url(#hsGlow)"/>
+    <g class="hs-rays">
+      <g stroke="#C9A46A" stroke-width="6" stroke-linecap="round" opacity=".55">
+        <path d="M240 58v28"/><path d="M240 254v28"/><path d="M128 170h28"/><path d="M324 170h28"/>
+        <path d="M161 91l20 20"/><path d="M299 229l20 20"/><path d="M161 249l20-20"/><path d="M299 111l20-20"/>
+      </g>
+    </g>
+    <circle class="hs-sun" cx="240" cy="170" r="52" fill="#B08D57"/>
+    <g class="hs-birds" fill="none" stroke="#4B3526" stroke-width="3" stroke-linecap="round" opacity=".6">
+      <path d="M80 110 q10 -10 20 0 q10 -10 20 0"/><path d="M130 86 q7 -7 14 0 q7 -7 14 0"/>
+    </g>
+  </g>
+
+  <g clip-path="url(#hsRight)">
+    <g class="hs-cloud">
+      <g fill="#97A59E"><ellipse cx="750" cy="130" rx="74" ry="40"/><ellipse cx="808" cy="146" rx="62" ry="34"/><ellipse cx="690" cy="152" rx="56" ry="30"/><ellipse cx="760" cy="160" rx="80" ry="28"/></g>
+      <g class="hs-rain" stroke="#6B7C75" stroke-width="4" stroke-linecap="round">
+        <path d="M680 200v24"/><path d="M712 214v24"/><path d="M744 200v24"/><path d="M776 214v24"/><path d="M808 200v24"/><path d="M840 214v24"/>
+        <path d="M696 250v24"/><path d="M728 264v24"/><path d="M760 250v24"/><path d="M792 264v24"/><path d="M824 250v24"/>
+      </g>
+    </g>
+  </g>
+
+  <path class="hs-m1" d="M-40 470 L110 330 210 400 350 250 470 390 580 290 690 380 810 260 930 360 1040 300 1040 520 -40 520Z" fill="#15281D"/>
+  <path class="hs-m2" d="M-40 510 L170 400 320 470 460 360 600 480 760 380 900 460 1040 410 1040 560 -40 560Z" fill="#23402F"/>
+  <path class="hs-m3" d="M-40 560 L200 480 420 530 640 460 860 520 1040 480 1040 600 -40 600Z" fill="#3F6149"/>
+
+  <rect x="0" y="580" width="1000" height="140" fill="#E7DCCB"/>
+  <path d="M140 710 L260 600 H740 L860 710Z" fill="url(#hsCourt)"/>
+  <path d="M140 710 L260 600 H740 L860 710Z M500 600V710 M205 655H795 M225 638H775" fill="none" stroke="#FBF8F2" stroke-width="3.5" opacity=".95"/>
+  <rect x="196" y="628" width="608" height="24" fill="none" stroke="#15281D" stroke-width="2" opacity=".75"/>
+  <path d="M196 640H804" stroke="#15281D" stroke-width="1" opacity=".4"/>
+  <rect x="190" y="622" width="6" height="34" fill="#15281D"/><rect x="804" y="622" width="6" height="34" fill="#15281D"/>
+
+  <ellipse class="hs-shadow" cx="500" cy="684" rx="16" ry="5" fill="#15281D" opacity=".28"/>
+  <g class="hs-ball-x"><g class="hs-ball-y">
+    <circle cx="500" cy="600" r="13" fill="#D8E04A"/>
+    <path d="M489 594 q11 7 22 0 M489 606 q11 -7 22 0" stroke="#fff" stroke-width="2.2" fill="none"/>
+  </g></g>
+</svg>
+</div>
+      <div class="float-card a"><svg class="icon" aria-hidden="true"><use href="#i-ball"/></svg><span>Only indoor courts<small>in all of Marin County</small></span></div>
+      <div class="float-card b"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span class="status" data-status="club">Club hours</span></div>
+      <div class="float-card c"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg><span>80+ classes<small>every week, free for members</small></span></div>
+      <figcaption>Fog, wind or rain never cancel your match.</figcaption>
+    </figure>
   </div>
 </section>
-<section class="infostrip" aria-label="Club basics">
+<section class="marquee" aria-label="What you can do at the club"><div class="track"><ul><li>Indoor tennis</li><li>Pickleball</li><li>Two pools</li><li>Pilates</li><li>Spin</li><li>Tai Chi</li><li>Summer camp</li><li>Aqua aerobics</li><li>Line dancing</li><li>Bridge Night</li><li>Personal training</li><li>Café</li></ul><ul aria-hidden="true"><li>Indoor tennis</li><li>Pickleball</li><li>Two pools</li><li>Pilates</li><li>Spin</li><li>Tai Chi</li><li>Summer camp</li><li>Aqua aerobics</li><li>Line dancing</li><li>Bridge Night</li><li>Personal training</li><li>Café</li></ul></div></section>
+<section class="section">
   <div class="wrap">
-    <div><h2>Club hours</h2><p>Mon–Fri: 4:45 AM – 10 PM<br>Sat–Sun: 6:45 AM – 9 PM</p></div>
-    <div><h2>Where we are</h2><p>One Larkspur Plaza Drive<br><a href="visit.html">Directions and hours</a></p></div>
-    <div><h2>Questions?</h2><p><a href="tel:+14159246226">(415) 924-6226</a><br><a href="mailto:info@mttamrc.com">info@mttamrc.com</a></p></div>
-    <div><h2>Members</h2><p><a href="https://www.myclublives.com/">Reserve a court or lane</a><br><a href="https://docs.google.com/spreadsheets/d/1HjjYzyDWP05rC8P9RYtvdh-P2yFSpe6OsQVdmHRS1SE/edit?usp=sharing">This month's class schedule</a></p></div>
+    <div class="statband">
+      <div><b data-count="1974" data-from="1900">1974</b><span>The year we opened</span></div>
+      <div><b data-count="80" data-suffix="+">80+</b><span>Free classes every week</span></div>
+      <div><b data-count="2">2</b><span>Pools, indoor and outdoor</span></div>
+      <div><b data-count="1">1</b><span>Club with indoor tennis in Marin</span></div>
+    </div>
+  </div>
+</section>
+<section class="section" style="padding-top:24px">
+  <div class="wrap">
+    <p class="kicker">Everything under one roof</p>
+    <h2>One membership. One friendly front desk.</h2>
+    <p class="section-intro">Pick where you'd like to start.</p>
+    <div class="bento">
+      <a class="b-lg dark" href="tennis.html"><img src="images/tennis.svg" alt="" width="600" height="420"><h3>Tennis, rain or shine</h3><p>Indoor and outdoor courts, lessons for every level, leagues and a full pro shop.</p><span class="more">About tennis</span></a>
+      <a class="b-md" href="swim.html"><img src="images/swim.svg" alt="" width="600" height="420"><h3>Two pools</h3><p>A heated 25-meter indoor pool, a 20-meter outdoor pool and a hot tub.</p><span class="more">About swimming</span></a>
+      <a class="b-sm" href="pickleball.html"><img src="images/pickleball.svg" alt="" width="600" height="420"><h3>Pickleball</h3><p>Saturday drop-in and lessons.</p><span class="more">Play pickleball</span></a>
+      <a class="b-sm dark" href="fitness.html"><img src="images/fitness.svg" alt="" width="600" height="420"><h3>Fitness</h3><p>A full gym and certified trainers.</p><span class="more">About fitness</span></a>
+      <a class="b-sm" href="pilates.html"><img src="images/pilates.svg" alt="" width="600" height="420"><h3>Pilates</h3><p>Your first class is on us.</p><span class="more">About Pilates</span></a>
+      <a class="b-sm" href="cafe.html"><img src="images/cafe.svg" alt="" width="600" height="420"><h3>Café</h3><p>Good coffee and a healthy lunch.</p><span class="more">See the menu</span></a>
+      <a class="b-sm dark" href="kids.html"><img src="images/kids.svg" alt="" width="600" height="420"><h3>Kids and camp</h3><p>Summer camp for ages 5–14.</p><span class="more">For families</span></a>
+      <a class="b-sm" href="classes.html"><img src="images/events.svg" alt="" width="600" height="420"><h3>Class guide</h3><p>Find a class that suits you.</p><span class="more">Browse classes</span></a>
+    </div>
+  </div>
+</section>
+<section class="day" aria-labelledby="day-h">
+  <div class="day-pin">
+    <div class="day-sticky">
+      <div class="wrap day-head">
+        <p class="kicker">A day at Mt. Tam</p>
+        <h2 id="day-h">From first light to lights out</h2>
+        <p class="section-intro" style="margin-bottom:0">Scroll to follow a typical day at the club.</p>
+      </div>
+      <div class="day-track"><article class="day-card" style="--glow:rgba(220,201,171,.4)"><time>4:45 AM</time><h3>Doors open</h3><p>Early risers hit the gym, the lap lanes and the first spin class of the day.</p><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></article><article class="day-card" style="--glow:rgba(111,154,155,.4)"><time>Morning</time><h3>Swim and stretch</h3><p>Lap swimming, aqua aerobics, Pilates and yoga fill the morning.</p><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg></article><article class="day-card" style="--glow:rgba(198,170,128,.45)"><time>10:30 AM</time><h3>Café opens</h3><p>Coffee, salads and lunch in the lounge, Tuesday through Sunday.</p><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg></article><article class="day-card" style="--glow:rgba(216,224,74,.3)"><time>Afternoon</time><h3>Lessons and clinics</h3><p>Private lessons, junior clinics and, in summer, camp on the courts.</p><svg class="icon" aria-hidden="true"><use href="#i-ball"/></svg></article><article class="day-card" style="--glow:rgba(139,164,143,.45)"><time>Evening</time><h3>Leagues and socials</h3><p>League matches, Tai Chi, line dancing and Bridge Night.</p><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></article><article class="day-card" style="--glow:rgba(220,201,171,.3)"><time>10 PM</time><h3>Lights out</h3><p>Weekday doors close at 10. Weekends run 6:45 AM to 9 PM.</p><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></article></div>
+      <div class="day-bar" aria-hidden="true"><span></span></div>
+    </div>
   </div>
 </section>
 <section class="section">
   <div class="wrap">
-    <h2>Everything under one roof</h2>
-    <p class="section-intro">One membership, one friendly front desk. Pick where you'd like to start.</p>
-    <div class="grid">
-      <a class="tile" href="tennis.html"><h3><svg class="icon" aria-hidden="true"><use href="#i-ball"/></svg>Tennis</h3><p>Indoor and outdoor courts, lessons for every level, and leagues from social to competitive.</p><span class="more">About tennis</span></a>
-      <a class="tile" href="pickleball.html"><h3><svg class="icon" aria-hidden="true"><use href="#i-paddle"/></svg>Pickleball</h3><p>Saturday drop-in play, demo paddles and lessons with certified coaches.</p><span class="more">About pickleball</span></a>
-      <a class="tile" href="swim.html"><h3><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg>Swim</h3><p>A heated 25-meter indoor pool, a 20-meter outdoor pool, a wading pool and a hot tub.</p><span class="more">About swimming</span></a>
-      <a class="tile" href="fitness.html"><h3><svg class="icon" aria-hidden="true"><use href="#i-dumbbell"/></svg>Fitness</h3><p>A full gym, certified trainers, a basketball court, a sauna and steam rooms.</p><span class="more">About fitness</span></a>
-      <a class="tile" href="pilates.html"><h3><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Pilates</h3><p>Reformer, mat and private sessions. Your first class is on us.</p><span class="more">About Pilates</span></a>
-      <a class="tile" href="classes.html"><h3><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>80+ classes a week</h3><p>Spin, yoga, Tai Chi, aqua aerobics and more, all free for members.</p><span class="more">Find a class for you</span></a>
+    <div class="feature">
+      <div class="fx-art"><img src="images/serve.svg" alt="Illustration of a tennis player serving" width="600" height="420"></div>
+      <div class="fx-body">
+        <p class="kicker">Meet our tennis director</p>
+        <h2>Shibu Lal</h2>
+        <p>A former touring pro and the winningest player in Bangladesh's Davis Cup history. Today he runs tennis at Mt. Tam: lessons, tournaments and the pro shop.</p>
+        <ul class="mini-stats"><li>Davis Cup record holder</li><li>Top 5 in NorCal Open</li><li>On court 7 days a week</li></ul>
+        <div class="actions"><a class="btn btn-primary" href="shibu-lal.html">Read Shibu's story</a><a class="btn btn-secondary" href="tennis.html#pros">All tennis pros</a></div>
+      </div>
     </div>
   </div>
 </section>
 <section class="section tint">
-  <div class="wrap two" style="align-items:center">
-    <div><img src="images/serve.svg" alt="Illustration of a tennis player serving" width="600" height="420"></div>
-    <div>
-      <h2>Meet our tennis director, Shibu Lal</h2>
-      <p>Shibu is a former touring pro and a Bangladesh Davis Cup veteran, and he has been ranked in the top five nationally in three senior age groups. Today he runs tennis at Mt. Tam: lessons, tournaments and the pro shop.</p>
-      <div class="actions"><a class="btn btn-primary" href="shibu-lal.html">Read Shibu's story</a><a class="btn btn-secondary" href="tennis.html#pros">All tennis pros</a></div>
-    </div>
-  </div>
-</section>
-<section class="section">
   <div class="wrap">
-    <h2>Something for every age</h2>
-    <p class="section-intro">From first swim lessons to Bridge Night, there's a place for you here.</p>
+    <p class="kicker">For every age</p>
+    <h2>First swim lessons to Bridge Night</h2>
+    <p class="section-intro">Families find something for everyone, from toddlers to grandparents.</p>
     <div class="ages">
-      <div class="tile"><h3>Kids and teens</h3><ul><li>Swim lessons, from toddlers up</li><li>Junior tennis clinics</li><li>Youth fitness, ages 7–17</li><li>Summer camp, ages 5–14</li></ul><p><a href="kids.html">Kids &amp; camp</a></p></div>
-      <div class="tile"><h3>Adults</h3><ul><li>Spin, HIIT, yoga, barre and more</li><li>Tennis leagues and pickleball</li><li>Personal training</li><li>Lap swimming all year</li></ul><p><a href="classes.html">Class guide</a></p></div>
-      <div class="tile"><h3>Older adults</h3><ul><li>Water aerobics that go easy on joints</li><li>Tai Chi, Qi Gong and gentle yoga</li><li>Pilates for injuries and aging</li><li>Bridge Night and line dancing</li></ul><p><a href="events.html">Events and club life</a></p></div>
-    </div>
-  </div>
-</section>
-<section class="section tint">
-  <div class="wrap">
-    <h2>What members say</h2>
-    <div class="two">
-      <blockquote class="pull">"It's the only local club with indoor tennis courts, and I've taken advantage of being able to play regardless of weather conditions. It's been my home away from home."<footer>Longtime member</footer></blockquote>
-      <blockquote class="pull">"I was nervous getting back in the water after 15 years, but the instructors at Mt. Tam made it feel like home."<footer>Jane S., member since 2023</footer></blockquote>
+      <div class="tile"><span class="age-badge k">Kids and teens</span><h3>Grow up playing</h3><ul><li>Swim lessons, from toddlers up</li><li>Junior tennis clinics</li><li>Teen fitness, ages 14+</li><li>Summer camp, ages 5–14</li></ul><p><a href="kids.html">Kids and camp</a></p></div>
+      <div class="tile"><span class="age-badge a">Adults</span><h3>Train your way</h3><ul><li>Spin, HIIT, yoga, barre and more</li><li>Tennis leagues and pickleball</li><li>Personal training</li><li>Lap swimming all year</li></ul><p><a href="classes.html">Class guide</a></p></div>
+      <div class="tile"><span class="age-badge o">Older adults</span><h3>Stay strong, stay social</h3><ul><li>Water aerobics that go easy on joints</li><li>Tai Chi, Qi Gong and gentle yoga</li><li>Pilates for injuries and aging</li><li>Bridge Night and line dancing</li></ul><p><a href="events.html">Events and club life</a></p></div>
     </div>
   </div>
 </section>
 <section class="section">
   <div class="wrap">
-    <h2>New here? Joining is easy.</h2>
+    <div class="quotes" aria-roledescription="carousel" aria-label="What members say">
+      <div class="q-mark" aria-hidden="true">&ldquo;</div>
+      <blockquote class="quote on"><p>It's the only local club with indoor tennis courts, and I've been able to play regardless of the weather. It's been my home away from home.</p><footer>Longtime member</footer></blockquote>
+      <blockquote class="quote"><p>I was nervous getting back in the water after 15 years, but the instructors at Mt. Tam made it feel like home.</p><footer>Jane S., member since 2023</footer></blockquote>
+      <blockquote class="quote"><p>A low-key club with great tennis and swim facilities, and a no-nonsense gym I use often.</p><footer>Club member</footer></blockquote>
+      <div class="q-controls"><button type="button" data-q aria-label="Show quote 1">1</button><button type="button" data-q aria-label="Show quote 2">2</button><button type="button" data-q aria-label="Show quote 3">3</button><button type="button" data-pause>Pause</button></div>
+    </div>
+  </div>
+</section>
+<section class="section tint">
+  <div class="wrap">
+    <p class="kicker">Joining is easy</p>
+    <h2>Three steps to your new club</h2>
     <ol class="steps">
       <li><strong>Come take a look</strong>Call or stop by the front desk for a relaxed tour of the courts, pools and gym.</li>
       <li><strong>Pick a membership</strong>Choose Tennis or Swim &amp; Fitness, for yourself or your whole family.</li>
       <li><strong>Get settled in</strong>Every new member gets a free session with a trainer to learn the equipment.</li>
     </ol>
-    <div class="actions"><a class="btn btn-primary" href="membership.html">Find the right membership</a><a class="btn btn-secondary" href="visit.html">Plan your first visit</a></div>
   </div>
 </section>
+<section class="cta-wrap"><div class="wrap"><div class="cta"><svg class="ridge" viewBox="0 0 600 200" aria-hidden="true"><path d="M0 200 L90 110 150 150 250 50 340 150 420 90 520 160 600 120 600 200Z" fill="#F7F3EC"/></svg><h2>Your new favorite place in Marin</h2><p>Tours are free and there is never any pressure. Come see the courts, pools and gym.</p><div class="actions"><a class="btn btn-primary" href="membership.html">Find the right membership</a><a class="btn btn-secondary" href="visit.html">Plan your first visit</a></div></div></div></section>
 </main>
 
 <footer class="footer">
@@ -195,6 +262,7 @@
         <ul><li><a href="https://www.facebook.com/MtTamRC/">Facebook</a></li><li><a href="https://www.instagram.com/mt.tamrc/">Instagram</a></li><li><a href="https://x.com/TamRacquet">X</a></li></ul>
       </div>
     </div>
+    <p class="wordmark" aria-hidden="true">Mt. Tam</p>
     <p class="fine">© 2026 Mt. Tam Racquet &amp; Athletic Club. Independently owned and operated. Illustrations made for this site.</p>
   </div>
 </footer>

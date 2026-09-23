@@ -9,8 +9,8 @@
 <meta property="og:type" content="website"><meta property="og:title" content="Our Team | Mt. Tam Racquet & Athletic Club"><meta property="og:description" content="Meet the staff, tennis pros, trainers and instructors at Mt. Tam Racquet & Athletic Club in Larkspur, CA.">
 <meta property="og:url" content="https://mttamrc.com/team"><meta property="og:image" content="https://mttamrc.com/images/og-image.png"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1D3A2B">
-<script>document.documentElement.classList.add('js');try{if(localStorage.getItem('mtrc-text')==='large')document.documentElement.classList.add('text-large');}catch(e){}function imgFail(i){var r=i.getAttribute('data-remote');if(r&&!i.dataset.tried){i.dataset.tried=1;i.src=r;return;}var f=i.getAttribute('data-fallback');if(f&&!i.dataset.fb){i.dataset.fb=1;i.classList.add('illo');i.src=f;return;}var m=document.createElement('span');m.className='mono'+(i.classList.contains('big')?' big':'');m.setAttribute('aria-hidden','true');m.textContent=i.getAttribute('data-initials');i.replaceWith(m);}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');try{var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches,mp=localStorage.getItem('mtrc-motion');document.documentElement.classList.add((mp==='off'||(rm&&mp!=='on'))?'reduce-motion':'motion-ok');}catch(e){document.documentElement.classList.add('motion-ok');}try{if(localStorage.getItem('mtrc-text')==='large')document.documentElement.classList.add('text-large');}catch(e){}function imgFail(i){var r=i.getAttribute('data-remote');if(r&&!i.dataset.tried){i.dataset.tried=1;i.src=r;return;}var f=i.getAttribute('data-fallback');if(f&&!i.dataset.fb){i.dataset.fb=1;i.classList.add('illo');i.src=f;return;}var m=document.createElement('span');m.className='mono'+(i.classList.contains('big')?' big':'');m.setAttribute('aria-hidden','true');m.textContent=i.getAttribute('data-initials');i.replaceWith(m);}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400..700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="styles.css">
@@ -41,17 +41,25 @@
 </svg>
 
 <a class="skip" href="#main">Skip to main content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar">
   <div class="wrap">
     <span class="item"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+14159246226">(415) 924-6226</a></span>
     <span class="item hours-item"><span class="status" data-status="club">Mon–Fri 4:45 AM–10 PM, Sat–Sun 6:45 AM–9 PM</span></span>
     <span class="spacer"></span>
-    <span class="textsize" role="group" aria-label="Text size">
-      <span>Text size</span>
-      <button type="button" data-size="normal" aria-pressed="true" aria-label="Standard text">A</button>
-      <button type="button" data-size="large" class="big" aria-pressed="false" aria-label="Larger text">A+</button>
+    <span class="toggles">
+      <span class="textsize" role="group" aria-label="Text size">
+        <span class="lbl">Text</span>
+        <button type="button" data-size="normal" aria-pressed="true" aria-label="Standard text">A</button>
+        <button type="button" data-size="large" class="big" aria-pressed="false" aria-label="Larger text">A+</button>
+      </span>
+      <span class="motion" role="group" aria-label="Animation">
+        <span class="lbl">Motion</span>
+        <button type="button" data-motion="on" aria-pressed="true">On</button>
+        <button type="button" data-motion="off" aria-pressed="false">Off</button>
+      </span>
     </span>
-    <a class="item" href="https://mtrc.clubautomation.com/member-portal/create-account">Member login</a>
+    <a class="item login-item" href="https://mtrc.clubautomation.com/member-portal/create-account">Member login</a>
   </div>
 </div>
 <header class="menubar">
@@ -61,15 +69,16 @@
       <span><b>Mt. Tam</b><small>Racquet &amp; Athletic Club</small></span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="label">Menu</span></button>
-    <nav id="site-nav" class="nav" aria-label="Main menu"><ul><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-0">Tennis<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-0"><span class="dd-label">Tennis</span><ul><li><a href="tennis.html">Tennis overview<small>Courts, lessons, clinics and leagues</small></a></li><li><a href="shibu-lal.html">Meet Shibu Lal<small>Our tennis director</small></a></li><li><a href="tennis.html#pros">Tennis pros<small>The coaches on our courts</small></a></li></ul></div></li><li><a href="pickleball.html">Pickleball</a></li><li><a href="swim.html">Swim</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-3">Fitness<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-3"><span class="dd-label">Fitness</span><ul><li><a href="fitness.html">Gym and training<small>Equipment, trainers and basketball</small></a></li><li><a href="pilates.html">Pilates studio<small>Reformer, mat and private sessions</small></a></li><li><a href="classes.html">Class guide<small>Find a class that suits you</small></a></li></ul></div></li><li><a href="kids.html">Kids &amp; camp</a></li><li><a href="cafe.html">Café</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-6" class="current">Club<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-6"><span class="dd-label">Club</span><ul><li><a href="events.html">Events and club life<small>Dances, Tai Chi, tournaments</small></a></li><li><a href="team.html" aria-current="page">Our team<small>The people who run the club</small></a></li><li><a href="about.html">Our story<small>Larkspur's club since 1974</small></a></li><li><a href="accessibility.html">Accessibility<small>How we make the club and site easy to use</small></a></li></ul></div></li><li><a href="visit.html">Visit</a></li><li class="join"><a href="membership.html">Join</a></li></ul></nav>
+    <nav id="site-nav" class="nav" aria-label="Main menu"><ul><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-0">Tennis<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-0"><span class="dd-label">Tennis</span><ul><li><a href="tennis.html">Tennis overview<small>Courts, lessons, clinics and leagues</small></a></li><li><a href="shibu-lal.html">Meet Shibu Lal<small>Our tennis director</small></a></li><li><a href="tennis.html#pros">Tennis pros<small>Shibu Lal and Steve Summer</small></a></li></ul></div></li><li><a href="pickleball.html">Pickleball</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-2">Swim<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-2"><span class="dd-label">Swim</span><ul><li><a href="swim.html">Pools and swimming<small>Indoor and outdoor pools, water aerobics</small></a></li><li><a href="swim-lessons.html">Swim lessons and prices<small>Private and group lessons for every age</small></a></li></ul></div></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-3">Fitness<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-3"><span class="dd-label">Fitness</span><ul><li><a href="fitness.html">Gym and training<small>Equipment, trainers and basketball</small></a></li><li><a href="pilates.html">Pilates studio<small>Reformer, mat and private sessions</small></a></li><li><a href="classes.html">Class guide<small>Find a class that suits you</small></a></li></ul></div></li><li><a href="kids.html">Kids &amp; camp</a></li><li><a href="cafe.html">Café</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-6" class="current">Club<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-6"><span class="dd-label">Club</span><ul><li><a href="events.html">Events and club life<small>Dances, Tai Chi, tournaments</small></a></li><li><a href="team.html" aria-current="page">Our team<small>The people who run the club</small></a></li><li><a href="about.html">Our story<small>Larkspur's club since 1974</small></a></li><li><a href="accessibility.html">Accessibility<small>How we make the club and site easy to use</small></a></li></ul></div></li><li><a href="visit.html">Visit</a></li><li class="join"><a href="membership.html">Join</a></li></ul></nav>
   </div>
 </header>
 <main id="main">
 
 <section class="pagehead">
+  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div>
-      <h1>Meet our team</h1>
+      <h1 data-split>Meet our team</h1>
       <p class="lede">Friendly faces, many of whom have been here for years. Say hello next time you visit.</p>
       
     </div>
@@ -96,8 +105,7 @@
     <div class="people">
       <article class="card-person"><img class="portrait" src="images/team/shibu-lal.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/BO.jpeg" data-initials="SL" alt="Photo of Shibu Lal" onerror="imgFail(this)" loading="lazy"><div><h3>Shibu Lal</h3><p class="role">Tennis Director</p><p>Former touring pro and Bangladesh Davis Cup record holder. <a href="shibu-lal.html">Read his story</a>.</p></div></article>
       <article class="card-person"><img class="portrait" src="images/team/steve-summer.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/Picture5.jpg" data-initials="SS" alt="Photo of Steve Summer" onerror="imgFail(this)" loading="lazy"><div><h3>Steve Summer</h3><p class="role">Tennis Pro</p><p>30+ years coaching beginners to world-ranked juniors.</p></div></article>
-      <article class="card-person"><span class="mono" aria-hidden="true">RL</span><div><h3>Raina Lal</h3><p class="role">Tennis Pro</p><p>Coaching juniors and adults at the club.</p></div></article>
-      <article class="card-person"><img class="portrait" src="images/team/juanito-guzman.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/09/Untitled-800-x-1200-px.jpg" data-initials="JG" alt="Photo of Juanito Guzman" onerror="imgFail(this)" loading="lazy"><div><h3>Juanito Guzman</h3><p class="role">Pickleball Coach</p><p>PPR-certified coach and longtime P.E. teacher.</p></div></article>
+            <article class="card-person"><img class="portrait" src="images/team/kevin-michaels.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/03/Kevin.jpg" data-initials="KM" alt="Photo of Kevin Michaels" onerror="imgFail(this)" loading="lazy"><div><h3>Kevin Michaels</h3><p class="role">Pickleball Coach</p><p>Runs pickleball lessons and the Saturday drop-in.</p></div></article>
     </div>
   </div>
 </section>
@@ -107,14 +115,21 @@
     <div class="people">
       <article class="card-person"><img class="portrait" src="images/team/jodie-hawley.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/jodie.jpg" data-initials="JH" alt="Photo of Jodie Hawley" onerror="imgFail(this)" loading="lazy"><div><h3>Jodie Hawley</h3><p class="role">Fitness Director</p><p>NASM Master Trainer, Stott Pilates, lifeguard and water aerobics instructor.</p></div></article>
       <article class="card-person"><img class="portrait" src="images/team/angela-downs.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/Angela-1.jpg" data-initials="AD" alt="Photo of Angela Downs" onerror="imgFail(this)" loading="lazy"><div><h3>Angela Downs</h3><p class="role">Personal Trainer and Spin</p><p>ACE, TRX and spin certified, 25+ years in fitness.</p></div></article>
-      <article class="card-person"><img class="portrait" src="images/team/beth-zamichow.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/Picture3.jpg" data-initials="BZ" alt="Photo of Beth Zamichow" onerror="imgFail(this)" loading="lazy"><div><h3>Beth Zamichow</h3><p class="role">Pilates and Movement Therapy</p><p>Longtime teacher of toning and stretching classes, including work with seniors.</p></div></article>
+      <article class="card-person"><span class="mono" aria-hidden="true">MK</span><div><h3>Marta Kaltrieder</h3><p class="role">Pilates and HIIT</p><p>Teaching Pilates and HIIT classes.</p></div></article>
       <article class="card-person"><img class="portrait" src="images/team/lynnette-kling.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/lynette.png" data-initials="LK" alt="Photo of Lynnette Kling" onerror="imgFail(this)" loading="lazy"><div><h3>Lynnette Kling</h3><p class="role">Cycling Instructor</p><p>Former NCAA springboard diver who has led cycling classes in Marin for 15 years.</p></div></article>
       <article class="card-person"><img class="portrait" src="images/team/kelley-busby.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/kelley.png" data-initials="KB" alt="Photo of Kelley Busby" onerror="imgFail(this)" loading="lazy"><div><h3>Kelley Busby</h3><p class="role">Yoga and Meditation</p><p>Kripalu-certified, teaching gentle to moderate yoga for 22 years.</p></div></article>
-      <article class="card-person"><img class="portrait" src="images/team/kevin-michaels.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/03/Kevin.jpg" data-initials="KM" alt="Photo of Kevin Michaels" onerror="imgFail(this)" loading="lazy"><div><h3>Kevin Michaels</h3><p class="role">Yoga, Training and Pickleball</p><p>Yoga instructor, personal trainer, nutrition coach and pickleball coach.</p></div></article>
+      <article class="card-person"><img class="portrait" src="images/team/kevin-michaels.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/03/Kevin.jpg" data-initials="KM" alt="Photo of Kevin Michaels" onerror="imgFail(this)" loading="lazy"><div><h3>Kevin Michaels</h3><p class="role">Yoga and Personal Training</p><p>Yoga instructor, personal trainer and nutrition coach.</p></div></article>
       <article class="card-person"><img class="portrait" src="images/team/al-loren.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/al.jpg" data-initials="AL" alt="Photo of Al Loren" onerror="imgFail(this)" loading="lazy"><div><h3>Al Loren</h3><p class="role">Master Teacher, Martial Arts and Tai Chi</p><p>40,000 classes taught in a 34-year career.</p></div></article>
       <article class="card-person"><img class="portrait" src="images/team/claire-cohn.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/Claire.jpg" data-initials="CR" alt="Photo of Claire R. Cohn" onerror="imgFail(this)" loading="lazy"><div><h3>Claire R. Cohn</h3><p class="role">Qi Gong Instructor</p><p>25+ years in movement education, with a focus on posture, gait and balance.</p></div></article>
       <article class="card-person"><img class="portrait" src="images/team/david-bearden.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/03/David-rotated.jpg" data-initials="DB" alt="Photo of David Bearden" onerror="imgFail(this)" loading="lazy"><div><h3>David Bearden</h3><p class="role">Tai Chi Instructor</p><p>Practicing Tai Chi since 1998, teaching a Yang-style form.</p></div></article>
     </div>
+  </div>
+</section>
+<section class="section tint">
+  <div class="wrap">
+    <h2>Swim instructors</h2>
+    <div class="people"><article class="card-person"><img class="portrait" src="images/team/hiroe-bell.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/Hiroe.jpg" data-initials="HB" alt="Photo of Hiroe Bell" onerror="imgFail(this)" loading="lazy"><div><h3>Hiroe Bell</h3><p class="role">Red Cross Water Safety Instructor, Masters Swim Coach</p><p>Over 25 years coaching, from total beginners to swimmers preparing for swim teams. A former member of Japan's Junior Olympic program, she has coached more than 100 swimmers who went on to USA Swimming clubs.</p></div></article><article class="card-person"><img class="portrait" src="images/team/vicki-stolberg.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/Vicky-S.jpg" data-initials="VS" alt="Photo of Vicki Stolberg" onerror="imgFail(this)" loading="lazy"><div><h3>Vicki Stolberg</h3><p class="role">Private Swim Instructor</p><p>Teaches kids from age 3 through teens, and adults from beginners to stroke work. A former college breaststroker, Masters swimmer and Redwood High assistant coach, with experience teaching neurodivergent swimmers.</p></div></article><article class="card-person"><img class="portrait" src="images/team/paige-santucci.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/03/IMG_2113-e1741365015495.jpeg" data-initials="PS" alt="Photo of Paige Santucci" onerror="imgFail(this)" loading="lazy"><div><h3>Paige Santucci</h3><p class="role">Swim Instructor, Aqua Aerobics</p><p>Ten years teaching private lessons, with a gift for helping kids feel safe and comfortable in the water. Paige also teaches our Monday aqua aerobics class.</p></div></article><article class="card-person"><img class="portrait" src="images/team/steven-katz.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/04/Untitled-design.png" data-initials="DS" alt="Photo of Dr. Steven Katz" onerror="imgFail(this)" loading="lazy"><div><h3>Dr. Steven Katz</h3><p class="role">Total Immersion Swim Coach</p><p>A certified Total Immersion coach who teaches smooth, efficient, mindful freestyle for adults of any age, one-on-one and in member workshops.</p></div></article></div>
+    <p style="margin-top:20px"><a href="swim-lessons.html">Swim lesson prices</a></p>
   </div>
 </section>
 </main>
@@ -143,6 +158,7 @@
         <ul><li><a href="https://www.facebook.com/MtTamRC/">Facebook</a></li><li><a href="https://www.instagram.com/mt.tamrc/">Instagram</a></li><li><a href="https://x.com/TamRacquet">X</a></li></ul>
       </div>
     </div>
+    <p class="wordmark" aria-hidden="true">Mt. Tam</p>
     <p class="fine">© 2026 Mt. Tam Racquet &amp; Athletic Club. Independently owned and operated. Illustrations made for this site.</p>
   </div>
 </footer>

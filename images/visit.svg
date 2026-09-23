@@ -1,10 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustrated map with a pin on the club location">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustrated map with a pin on the club location"><style>
+@media (prefers-reduced-motion: no-preference){
+.bob{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+.steam{animation:steam 3.2s ease-in-out infinite;opacity:0}
+.steam.d2{animation-delay:1s}.steam.d3{animation-delay:2s}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+.twinkle:nth-of-type(2n){animation-delay:.8s}.twinkle:nth-of-type(3n){animation-delay:1.6s}
+.wave{animation:wave 6s linear infinite}
+.bx{animation:bx 3.2s ease-in-out infinite alternate}
+.by{animation:by .8s cubic-bezier(.5,0,.5,1) infinite alternate}
+.toss{animation:toss 2.4s ease-in-out infinite}
+.drift{animation:drift 9s ease-in-out infinite alternate}
+.spin{animation:spin 30s linear infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}35%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes wave{to{transform:translateX(-60px)}}
+@keyframes bx{from{transform:translateX(-120px)}to{transform:translateX(90px)}}
+@keyframes by{from{transform:translateY(-40px)}to{transform:translateY(20px)}}
+@keyframes toss{0%,100%{transform:translateY(0)}50%{transform:translateY(-34px)}}
+@keyframes drift{to{transform:translateX(40px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
 <rect width="600" height="420" fill="#E8EDE0"/>
 <path d="M0 90 C 150 120 250 60 360 110 S 540 150 600 120" stroke="#fff" stroke-width="30" fill="none"/>
 <path d="M200 0 C 230 140 180 260 260 420" stroke="#fff" stroke-width="22" fill="none"/>
-<path d="M0 90 C 150 120 250 60 360 110 S 540 150 600 120" stroke="#CE9A38" stroke-width="4" stroke-dasharray="14 12" fill="none"/>
-<rect x="380" y="250" width="160" height="100" rx="8" fill="#3D7E93" opacity=".35"/>
-<path d="M20 420 L90 300 150 350 230 250 330 420Z" fill="#5E7D66" opacity=".6"/>
-<g transform="translate(330 250)"><path d="M0 60 C -40 10 -46 -10 -46 -28 a46 46 0 0 1 92 0 c0 18 -6 38 -46 88z" fill="#8A3B29"/><circle cy="-28" r="18" fill="#fff"/></g>
-<rect x="400" y="30" width="170" height="44" rx="8" fill="#fff"/><text x="485" y="58" text-anchor="middle" font-family="Verdana" font-size="15" fill="#12251A">Larkspur Plaza Dr</text>
+<path d="M0 90 C 150 120 250 60 360 110 S 540 150 600 120" stroke="#B08D57" stroke-width="4" stroke-dasharray="14 12" fill="none"/>
+<rect x="380" y="250" width="160" height="100" rx="8" fill="#6F9A9B" opacity=".35"/>
+<path d="M20 420 L90 300 150 350 230 250 330 420Z" fill="#8BA48F" opacity=".6"/>
+<g transform="translate(330 250)"><g class="bob"><path d="M0 60 C -40 10 -46 -10 -46 -28 a46 46 0 0 1 92 0 c0 18 -6 38 -46 88z" fill="#5A3E2B"/><circle cy="-28" r="18" fill="#fff"/></g></g>
+<rect x="400" y="30" width="170" height="44" rx="8" fill="#fff"/><text x="485" y="58" text-anchor="middle" font-family="Verdana" font-size="15" fill="#15281D">Larkspur Plaza Dr</text>
 </svg>

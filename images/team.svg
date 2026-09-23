@@ -1,5 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of five smiling club staff members">
-<rect width="600" height="420" fill="#F1F3EC"/>
-<rect x="0" y="320" width="600" height="100" fill="#3B5A45"/>
-<g transform="translate(110 210)"><path d="M-52 120 v-40 a52 52 0 0 1 104 0 v40z" fill="#8A3B29"/><circle cy="0" r="32" fill="#D9A77F"/></g><g transform="translate(215 190)"><path d="M-56 120 v-40 a56 56 0 0 1 112 0 v40z" fill="#3D7E93"/><circle cy="0" r="34" fill="#8C5A3C"/></g><g transform="translate(330 200)"><path d="M-58 120 v-40 a58 58 0 0 1 116 0 v40z" fill="#1D3A2B"/><circle cy="0" r="35" fill="#E8C2A0"/></g><g transform="translate(445 190)"><path d="M-54 120 v-40 a54 54 0 0 1 108 0 v40z" fill="#CE9A38"/><circle cy="0" r="33" fill="#B97A54"/></g><g transform="translate(530 225)"><path d="M-44 120 v-40 a44 44 0 0 1 88 0 v40z" fill="#C4593F"/><circle cy="0" r="27" fill="#F0CDA9"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of five smiling club staff members"><style>
+@media (prefers-reduced-motion: no-preference){
+.bob{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+.steam{animation:steam 3.2s ease-in-out infinite;opacity:0}
+.steam.d2{animation-delay:1s}.steam.d3{animation-delay:2s}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+.twinkle:nth-of-type(2n){animation-delay:.8s}.twinkle:nth-of-type(3n){animation-delay:1.6s}
+.wave{animation:wave 6s linear infinite}
+.bx{animation:bx 3.2s ease-in-out infinite alternate}
+.by{animation:by .8s cubic-bezier(.5,0,.5,1) infinite alternate}
+.toss{animation:toss 2.4s ease-in-out infinite}
+.drift{animation:drift 9s ease-in-out infinite alternate}
+.spin{animation:spin 30s linear infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}35%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes wave{to{transform:translateX(-60px)}}
+@keyframes bx{from{transform:translateX(-120px)}to{transform:translateX(90px)}}
+@keyframes by{from{transform:translateY(-40px)}to{transform:translateY(20px)}}
+@keyframes toss{0%,100%{transform:translateY(0)}50%{transform:translateY(-34px)}}
+@keyframes drift{to{transform:translateX(40px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<rect width="600" height="420" fill="#F7F3EC"/>
+<rect x="0" y="320" width="600" height="100" fill="#3F6149"/>
+<g transform="translate(110 210)"><g class="bob" style="animation-delay:0.37s"><path d="M-52 120 v-40 a52 52 0 0 1 104 0 v40z" fill="#5A3E2B"/><circle cy="0" r="32" fill="#D9A77F"/></g></g><g transform="translate(215 190)"><g class="bob" style="animation-delay:0.72s"><path d="M-56 120 v-40 a56 56 0 0 1 112 0 v40z" fill="#6F9A9B"/><circle cy="0" r="34" fill="#8C5A3C"/></g></g><g transform="translate(330 200)"><g class="bob" style="animation-delay:1.10s"><path d="M-58 120 v-40 a58 58 0 0 1 116 0 v40z" fill="#23402F"/><circle cy="0" r="35" fill="#E8C2A0"/></g></g><g transform="translate(445 190)"><g class="bob" style="animation-delay:1.48s"><path d="M-54 120 v-40 a54 54 0 0 1 108 0 v40z" fill="#B08D57"/><circle cy="0" r="33" fill="#B97A54"/></g></g><g transform="translate(530 225)"><g class="bob" style="animation-delay:1.77s"><path d="M-44 120 v-40 a44 44 0 0 1 88 0 v40z" fill="#A67C52"/><circle cy="0" r="27" fill="#F0CDA9"/></g></g>
 </svg>

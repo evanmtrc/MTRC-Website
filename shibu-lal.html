@@ -9,8 +9,8 @@
 <meta property="og:type" content="website"><meta property="og:title" content="Shibu Lal, Tennis Director | Mt. Tam Racquet & Athletic Club"><meta property="og:description" content="Meet Shibu Lal, Mt. Tam's tennis director: former touring pro, Bangladesh Davis Cup record holder, and top-ranked senior player.">
 <meta property="og:url" content="https://mttamrc.com/shibu-lal"><meta property="og:image" content="https://mttamrc.com/images/og-image.png"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1D3A2B">
-<script>document.documentElement.classList.add('js');try{if(localStorage.getItem('mtrc-text')==='large')document.documentElement.classList.add('text-large');}catch(e){}function imgFail(i){var r=i.getAttribute('data-remote');if(r&&!i.dataset.tried){i.dataset.tried=1;i.src=r;return;}var f=i.getAttribute('data-fallback');if(f&&!i.dataset.fb){i.dataset.fb=1;i.classList.add('illo');i.src=f;return;}var m=document.createElement('span');m.className='mono'+(i.classList.contains('big')?' big':'');m.setAttribute('aria-hidden','true');m.textContent=i.getAttribute('data-initials');i.replaceWith(m);}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');try{var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches,mp=localStorage.getItem('mtrc-motion');document.documentElement.classList.add((mp==='off'||(rm&&mp!=='on'))?'reduce-motion':'motion-ok');}catch(e){document.documentElement.classList.add('motion-ok');}try{if(localStorage.getItem('mtrc-text')==='large')document.documentElement.classList.add('text-large');}catch(e){}function imgFail(i){var r=i.getAttribute('data-remote');if(r&&!i.dataset.tried){i.dataset.tried=1;i.src=r;return;}var f=i.getAttribute('data-fallback');if(f&&!i.dataset.fb){i.dataset.fb=1;i.classList.add('illo');i.src=f;return;}var m=document.createElement('span');m.className='mono'+(i.classList.contains('big')?' big':'');m.setAttribute('aria-hidden','true');m.textContent=i.getAttribute('data-initials');i.replaceWith(m);}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400..700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="styles.css">
@@ -41,17 +41,25 @@
 </svg>
 
 <a class="skip" href="#main">Skip to main content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar">
   <div class="wrap">
     <span class="item"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+14159246226">(415) 924-6226</a></span>
     <span class="item hours-item"><span class="status" data-status="club">Mon–Fri 4:45 AM–10 PM, Sat–Sun 6:45 AM–9 PM</span></span>
     <span class="spacer"></span>
-    <span class="textsize" role="group" aria-label="Text size">
-      <span>Text size</span>
-      <button type="button" data-size="normal" aria-pressed="true" aria-label="Standard text">A</button>
-      <button type="button" data-size="large" class="big" aria-pressed="false" aria-label="Larger text">A+</button>
+    <span class="toggles">
+      <span class="textsize" role="group" aria-label="Text size">
+        <span class="lbl">Text</span>
+        <button type="button" data-size="normal" aria-pressed="true" aria-label="Standard text">A</button>
+        <button type="button" data-size="large" class="big" aria-pressed="false" aria-label="Larger text">A+</button>
+      </span>
+      <span class="motion" role="group" aria-label="Animation">
+        <span class="lbl">Motion</span>
+        <button type="button" data-motion="on" aria-pressed="true">On</button>
+        <button type="button" data-motion="off" aria-pressed="false">Off</button>
+      </span>
     </span>
-    <a class="item" href="https://mtrc.clubautomation.com/member-portal/create-account">Member login</a>
+    <a class="item login-item" href="https://mtrc.clubautomation.com/member-portal/create-account">Member login</a>
   </div>
 </div>
 <header class="menubar">
@@ -61,30 +69,33 @@
       <span><b>Mt. Tam</b><small>Racquet &amp; Athletic Club</small></span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="label">Menu</span></button>
-    <nav id="site-nav" class="nav" aria-label="Main menu"><ul><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-0" class="current">Tennis<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-0"><span class="dd-label">Tennis</span><ul><li><a href="tennis.html">Tennis overview<small>Courts, lessons, clinics and leagues</small></a></li><li><a href="shibu-lal.html" aria-current="page">Meet Shibu Lal<small>Our tennis director</small></a></li><li><a href="tennis.html#pros">Tennis pros<small>The coaches on our courts</small></a></li></ul></div></li><li><a href="pickleball.html">Pickleball</a></li><li><a href="swim.html">Swim</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-3">Fitness<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-3"><span class="dd-label">Fitness</span><ul><li><a href="fitness.html">Gym and training<small>Equipment, trainers and basketball</small></a></li><li><a href="pilates.html">Pilates studio<small>Reformer, mat and private sessions</small></a></li><li><a href="classes.html">Class guide<small>Find a class that suits you</small></a></li></ul></div></li><li><a href="kids.html">Kids &amp; camp</a></li><li><a href="cafe.html">Café</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-6">Club<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-6"><span class="dd-label">Club</span><ul><li><a href="events.html">Events and club life<small>Dances, Tai Chi, tournaments</small></a></li><li><a href="team.html">Our team<small>The people who run the club</small></a></li><li><a href="about.html">Our story<small>Larkspur's club since 1974</small></a></li><li><a href="accessibility.html">Accessibility<small>How we make the club and site easy to use</small></a></li></ul></div></li><li><a href="visit.html">Visit</a></li><li class="join"><a href="membership.html">Join</a></li></ul></nav>
+    <nav id="site-nav" class="nav" aria-label="Main menu"><ul><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-0" class="current">Tennis<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-0"><span class="dd-label">Tennis</span><ul><li><a href="tennis.html">Tennis overview<small>Courts, lessons, clinics and leagues</small></a></li><li><a href="shibu-lal.html" aria-current="page">Meet Shibu Lal<small>Our tennis director</small></a></li><li><a href="tennis.html#pros">Tennis pros<small>Shibu Lal and Steve Summer</small></a></li></ul></div></li><li><a href="pickleball.html">Pickleball</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-2">Swim<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-2"><span class="dd-label">Swim</span><ul><li><a href="swim.html">Pools and swimming<small>Indoor and outdoor pools, water aerobics</small></a></li><li><a href="swim-lessons.html">Swim lessons and prices<small>Private and group lessons for every age</small></a></li></ul></div></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-3">Fitness<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-3"><span class="dd-label">Fitness</span><ul><li><a href="fitness.html">Gym and training<small>Equipment, trainers and basketball</small></a></li><li><a href="pilates.html">Pilates studio<small>Reformer, mat and private sessions</small></a></li><li><a href="classes.html">Class guide<small>Find a class that suits you</small></a></li></ul></div></li><li><a href="kids.html">Kids &amp; camp</a></li><li><a href="cafe.html">Café</a></li><li class="dd"><button type="button" aria-expanded="false" aria-controls="dd-6">Club<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></button><div class="panel" id="dd-6"><span class="dd-label">Club</span><ul><li><a href="events.html">Events and club life<small>Dances, Tai Chi, tournaments</small></a></li><li><a href="team.html">Our team<small>The people who run the club</small></a></li><li><a href="about.html">Our story<small>Larkspur's club since 1974</small></a></li><li><a href="accessibility.html">Accessibility<small>How we make the club and site easy to use</small></a></li></ul></div></li><li><a href="visit.html">Visit</a></li><li class="join"><a href="membership.html">Join</a></li></ul></nav>
   </div>
 </header>
 <main id="main">
 
 <section class="feature-hero">
+  <svg class="court-lines" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M100 80H1100V620H100Z"/><path d="M100 170H1100M100 530H1100M300 170V530M900 170V530M300 350H900M600 80V620"/></svg>
   <div class="wrap">
     <div>
-      <h1>Shibu Lal</h1>
+      <p class="kicker" style="color:var(--tan)">Tennis at Mt. Tam</p>
+      <h1 data-split>Shibu Lal</h1>
       <p class="role">Tennis Director, Mt. Tam Racquet &amp; Athletic Club</p>
       <p>Born in Dhaka, Bangladesh, Shibu turned pro as a teenager, played Davis Cup for his country, and coached around the world before settling in Marin. At the club, most people just call him Bo.</p>
-      <div class="actions"><a class="btn btn-primary" href="tel:+14159246226"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Book a lesson</a><a class="btn btn-secondary" href="#pro-shop">Visit the pro shop</a></div>
+      <div class="actions"><a class="btn btn-primary" href="tel:+14155059550"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Book a lesson: (415) 505-9550</a><a class="btn btn-secondary" href="#pro-shop">Visit the pro shop</a></div>
     </div>
-    <div class="portrait-wrap"><img class="portrait big" src="images/team/shibu-lal.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/BO.jpeg" data-fallback="images/serve.svg" data-initials="SL" alt="Photo of Shibu Lal" onerror="imgFail(this)" loading="lazy"></div>
+    <div class="portrait-wrap"><span class="ring r2" aria-hidden="true"></span><span class="ring" aria-hidden="true"></span><span class="orbit-ball" aria-hidden="true"></span><img class="portrait big" src="images/team/shibu-lal.jpg" data-remote="https://mttamrc.com/wp-content/uploads/2025/02/BO.jpeg" data-fallback="images/serve.svg" data-initials="SL" alt="Photo of Shibu Lal" onerror="imgFail(this)" loading="lazy"></div>
   </div>
 </section>
 <section class="section">
   <div class="wrap">
+    <p class="kicker">By the numbers</p>
     <h2>A career in tennis</h2>
     <ul class="stats">
-      <li><b>Davis Cup</b>The winningest player in Bangladesh's Davis Cup history.</li>
-      <li><b>Top 5 in NorCal</b>Ranked among the top five Open players in Northern California.</li>
-      <li><b>Top 5 nationally</b>In the men's 35, 40 and 45 age divisions.</li>
-      <li><b>15 minutes</b>How long it takes him to string a racquet, one of the fastest in the business.</li>
+      <li><b>No. 1</b>The winningest player in Bangladesh's Davis Cup history.</li>
+      <li><b>Top <span data-count="5">5</span></b>Ranked among the top five Open players in Northern California.</li>
+      <li><b><span data-count="3">3</span> age groups</b>Ranked top five nationally in the men's 35, 40 and 45 divisions.</li>
+      <li><b><span data-count="7">7</span> days a week</b>Shibu is at the club every day, all day long. That makes lessons easy to schedule.</li>
     </ul>
   </div>
 </section>
@@ -111,8 +122,8 @@
   <div class="wrap two" style="align-items:center">
     <div>
       <h2>The pro shop</h2>
-      <p>Shibu runs the club's pro shop. He'll help you find the right racquet and strings for your game, and string it while you wait.</p>
-      <ul class="checks"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Racquet stringing, often done in about 15 minutes</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Help choosing a racquet and string setup</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Special orders from any major racquet or shoe brand</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Loaner racquets for new players</span></li></ul>
+      <p>Shibu runs the club's pro shop. He'll help you find the right racquet and strings for your game, and string it for you, often the same day.</p>
+      <ul class="checks"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Racquet stringing on site</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Help choosing a racquet and string setup</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Special orders from any major racquet or shoe brand</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Loaner racquets for new players</span></li></ul>
     </div>
     <div><img src="images/tennis.svg" alt="Illustration of an indoor tennis court" width="600" height="420"></div>
   </div>
@@ -120,9 +131,9 @@
 <section class="section tint">
   <div class="wrap">
     <h2>Lessons with Shibu</h2>
-    <div class="faq"><details><summary>Who does Shibu teach?</summary><p>Adults and juniors of every level, from first-timers to tournament players.</p></details><details><summary>How do I book?</summary><p>Call the front desk at <a href="tel:+14159246226">(415) 924-6226</a> and ask for a lesson with Shibu.</p></details><details><summary>Do I need to be a member?</summary><p>Call the front desk. Trial lessons are available for people thinking about joining.</p></details><details><summary>Can he help with my equipment?</summary><p>Yes. Bring your racquet by the pro shop for stringing or advice.</p></details></div>
+    <div class="faq"><details><summary>Who does Shibu teach?</summary><p>Adults and juniors of every level, from first-timers to tournament players.</p></details><details><summary>How do I book?</summary><p>Call or text Shibu directly at <a href="tel:+14155059550">(415) 505-9550</a>. He is at the club 7 days a week.</p></details><details><summary>Do I need to be a member?</summary><p>Call the front desk. Trial lessons are available for people thinking about joining.</p></details><details><summary>Can he help with my equipment?</summary><p>Yes. Bring your racquet by the pro shop for stringing or advice.</p></details></div>
   </div>
-</section><section class="section tint"><div class="wrap"><h2>Play with the best in Marin</h2><p>Book a lesson, a racquet restring, or a tour of the courts.</p><div class="actions"><a class="btn btn-primary" href="tel:+14159246226">Call (415) 924-6226</a><a class="btn btn-secondary" href="tennis.html">Back to tennis</a></div></div></section>
+</section><section class="cta-wrap"><div class="wrap"><div class="cta"><svg class="ridge" viewBox="0 0 600 200" aria-hidden="true"><path d="M0 200 L90 110 150 150 250 50 340 150 420 90 520 160 600 120 600 200Z" fill="#F7F3EC"/></svg><h2>Play with the best in Marin</h2><p>Book a lesson or a racquet restring with Shibu. He is on court 7 days a week, all day long.</p><div class="actions"><a class="btn btn-primary" href="tel:+14155059550">Call Shibu: (415) 505-9550</a><a class="btn btn-secondary" href="tennis.html">Back to tennis</a></div></div></div></section>
 </main>
 
 <footer class="footer">
@@ -149,6 +160,7 @@
         <ul><li><a href="https://www.facebook.com/MtTamRC/">Facebook</a></li><li><a href="https://www.instagram.com/mt.tamrc/">Instagram</a></li><li><a href="https://x.com/TamRacquet">X</a></li></ul>
       </div>
     </div>
+    <p class="wordmark" aria-hidden="true">Mt. Tam</p>
     <p class="fine">© 2026 Mt. Tam Racquet &amp; Athletic Club. Independently owned and operated. Illustrations made for this site.</p>
   </div>
 </footer>
