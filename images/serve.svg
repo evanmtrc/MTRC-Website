@@ -1,14 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of a tennis player serving">
-<rect width="600" height="420" fill="#1D3A2B"/>
-<circle cx="440" cy="120" r="140" fill="#2C4E3B"/>
-<rect x="0" y="330" width="600" height="90" fill="#3D7E93"/><path d="M0 345 H600" stroke="#fff" stroke-width="4"/>
-<g transform="translate(300 330)" fill="#F1F3EC">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Illustration of a tennis player serving"><style>
+@media (prefers-reduced-motion: no-preference){
+.bob{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+.steam{animation:steam 3.2s ease-in-out infinite;opacity:0}
+.steam.d2{animation-delay:1s}.steam.d3{animation-delay:2s}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+.twinkle:nth-of-type(2n){animation-delay:.8s}.twinkle:nth-of-type(3n){animation-delay:1.6s}
+.wave{animation:wave 6s linear infinite}
+.bx{animation:bx 3.2s ease-in-out infinite alternate}
+.by{animation:by .8s cubic-bezier(.5,0,.5,1) infinite alternate}
+.toss{animation:toss 2.4s ease-in-out infinite}
+.drift{animation:drift 9s ease-in-out infinite alternate}
+.spin{animation:spin 30s linear infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}35%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes wave{to{transform:translateX(-60px)}}
+@keyframes bx{from{transform:translateX(-120px)}to{transform:translateX(90px)}}
+@keyframes by{from{transform:translateY(-40px)}to{transform:translateY(20px)}}
+@keyframes toss{0%,100%{transform:translateY(0)}50%{transform:translateY(-34px)}}
+@keyframes drift{to{transform:translateX(40px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<rect width="600" height="420" fill="#23402F"/>
+<circle cx="440" cy="120" r="140" fill="#2F5540"/>
+<rect x="0" y="330" width="600" height="90" fill="#6F9A9B"/><path d="M0 345 H600" stroke="#fff" stroke-width="4"/>
+<g transform="translate(300 330)" fill="#F7F3EC">
 <path d="M-18 0 L-4 -90 L10 0 Z" />
 <path d="M-26 -88 q 20 -70 30 -120 l 22 4 q -6 60 -16 118z"/>
 <circle cx="14" cy="-228" r="18"/>
-<path d="M4 -196 L -40 -250" stroke="#F1F3EC" stroke-width="12" stroke-linecap="round"/>
-<path d="M18 -190 L 60 -260" stroke="#F1F3EC" stroke-width="12" stroke-linecap="round"/>
-<path d="M60 -260 L 70 -300" stroke="#CE9A38" stroke-width="6"/><ellipse cx="78" cy="-326" rx="18" ry="26" fill="none" stroke="#CE9A38" stroke-width="6" transform="rotate(15 78 -326)"/>
+<path d="M4 -196 L -40 -250" stroke="#F7F3EC" stroke-width="12" stroke-linecap="round"/>
+<path d="M18 -190 L 60 -260" stroke="#F7F3EC" stroke-width="12" stroke-linecap="round"/>
+<path d="M60 -260 L 70 -300" stroke="#B08D57" stroke-width="6"/><ellipse cx="78" cy="-326" rx="18" ry="26" fill="none" stroke="#B08D57" stroke-width="6" transform="rotate(15 78 -326)"/>
 </g>
-<circle cx="242" cy="56" r="11" fill="#D8E04A"/>
+<circle class="toss" cx="368" cy="40" r="11" fill="#D8E04A"/>
 </svg>
